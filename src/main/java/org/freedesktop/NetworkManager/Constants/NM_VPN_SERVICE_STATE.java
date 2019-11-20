@@ -2,7 +2,7 @@ package org.freedesktop.NetworkManager.Constants;
 
 				
 
-				import org.freedesktop.dbus.UInt32;
+				import org.freedesktop.dbus.types.UInt32;
 				
 
 				public class NM_VPN_SERVICE_STATE{

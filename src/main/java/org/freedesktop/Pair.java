@@ -1,5 +1,5 @@
 package org.freedesktop;
-import org.freedesktop.dbus.Position;
+import org.freedesktop.dbus.annotations.Position;
 import org.freedesktop.dbus.Tuple;
 /** Just a typed container class */
 public final class Pair <A,B> extends Tuple

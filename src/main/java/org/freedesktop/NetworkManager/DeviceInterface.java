@@ -1,5 +1,9 @@
 package org.freedesktop.NetworkManager;
-import org.freedesktop.dbus.*;
+//import org.freedesktop.dbus.*;
+import org.freedesktop.dbus.types.UInt32;
+import org.freedesktop.dbus.messages.DBusSignal;
+import org.freedesktop.dbus.interfaces.DBusInterface;
+import org.freedesktop.dbus.annotations.DBusInterfaceName;
 import org.freedesktop.dbus.exceptions.DBusException;
 
 @DBusInterfaceName("org.freedesktop.NetworkManager.Device") 

@@ -1,6 +1,6 @@
 package org.freedesktop.NetworkManager.Constants;
 
-import org.freedesktop.dbus.UInt32;
+import org.freedesktop.dbus.types.UInt32;
 public class NM_DEVICE_MODEM_CAPABILITIES{
 public static final UInt32 NONE= new UInt32(0x0);
 public static final UInt32 POTS= new UInt32(0x1);

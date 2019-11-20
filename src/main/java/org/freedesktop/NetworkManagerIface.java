@@ -2,8 +2,13 @@ package org.freedesktop;
 import java.util.List;
 import java.util.Map;
 
-import org.freedesktop.dbus.*;
-import org.freedesktop.dbus.exceptions.*;
+import org.freedesktop.dbus.interfaces.DBusInterface;
+import org.freedesktop.dbus.annotations.DBusInterfaceName;
+import org.freedesktop.dbus.messages.DBusSignal;
+import org.freedesktop.dbus.types.Variant;
+import org.freedesktop.dbus.exceptions.DBusException;
+import org.freedesktop.dbus.types.UInt32;
+import org.freedesktop.dbus.ObjectPath;
 
 @DBusInterfaceName("org.freedesktop.NetworkManager") 
 public interface NetworkManagerIface extends DBusInterface
@@ -74,6 +79,6 @@ public interface NetworkManagerIface extends DBusInterface
   public Pair<DBusInterface, DBusInterface> AddAndActivateConnection(Map<String,Map<String,Variant>> connection, DBusInterface device, DBusInterface specific_object);
   public DBusInterface ActivateConnection(DBusInterface connection, DBusInterface device, DBusInterface specific_object);
   public DBusInterface GetDeviceByIpIface(String iface);
-  public List<Path> GetDevices();
+  public List<ObjectPath> GetDevices();
 
 }

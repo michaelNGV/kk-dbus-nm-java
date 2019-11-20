@@ -171,7 +171,7 @@ public class UnixSocket
     * @see getPeerUID
     * @see getPeerPID
     * @see getPeerGID
-    * @param data The byte of data to send.
+    * @return The byte of data to send.
     */
    public byte recvCredentialByte() throws IOException
    {
