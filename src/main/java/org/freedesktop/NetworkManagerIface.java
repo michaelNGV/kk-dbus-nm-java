@@ -8,7 +8,7 @@ import org.freedesktop.dbus.messages.DBusSignal;
 import org.freedesktop.dbus.types.Variant;
 import org.freedesktop.dbus.exceptions.DBusException;
 import org.freedesktop.dbus.types.UInt32;
-import org.freedesktop.dbus.ObjectPath;
+import org.freedesktop.dbus.DBusPath;
 
 @DBusInterfaceName("org.freedesktop.NetworkManager") 
 public interface NetworkManagerIface extends DBusInterface
@@ -76,9 +76,9 @@ public interface NetworkManagerIface extends DBusInterface
   public void Enable(boolean enable);
   public void Sleep(boolean sleep);
   public void DeactivateConnection(DBusInterface active_connection);
-  public Pair<DBusInterface, DBusInterface> AddAndActivateConnection(Map<String,Map<String,Variant>> connection, DBusInterface device, DBusInterface specific_object);
-  public DBusInterface ActivateConnection(DBusInterface connection, DBusInterface device, DBusInterface specific_object);
+  public Pair<DBusPath, DBusPath> AddAndActivateConnection(Map<String,Map<String,Variant>> connection, DBusPath device, DBusPath specific_object);
+  public DBusPath ActivateConnection(DBusPath connection, DBusPath device, DBusPath specific_object);
   public DBusInterface GetDeviceByIpIface(String iface);
-  public List<ObjectPath> GetDevices();
+  public List<DBusPath> GetDevices();
 
 }
