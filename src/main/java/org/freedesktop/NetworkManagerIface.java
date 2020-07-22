@@ -76,7 +76,7 @@ public interface NetworkManagerIface extends DBusInterface
   public void Enable(boolean enable);
   public void Sleep(boolean sleep);
   public void DeactivateConnection(DBusInterface active_connection);
-  public Pair<DBusPath, DBusPath> AddAndActivateConnection(Map<String,Map<String,Variant>> connection, DBusPath device, DBusPath specific_object);
+  public Pair<DBusPath, DBusPath> AddAndActivateConnection(Map<String,Map<String,Variant<?>>> connection, DBusPath device, DBusPath specific_object);
   public DBusPath ActivateConnection(DBusPath connection, DBusPath device, DBusPath specific_object);
   public DBusInterface GetDeviceByIpIface(String iface);
   public List<DBusPath> GetDevices();
